@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-from turtle import pos
->>>>>>> fdc9cef46373a601c1d6b806f73c6d7fdffb6291
 from django.shortcuts import render,get_object_or_404
 from .models import Post , Comment
 from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
@@ -46,7 +41,6 @@ def post_list(request):
  
 
 def post_detail(request,year,month,day,post):
-<<<<<<< HEAD
     post=get_object_or_404(Post,slug=post,status='published', publish__year=year, publish__month=month, publish__day=day)
 
     #List of active comments for this post
@@ -67,15 +61,6 @@ def post_detail(request,year,month,day,post):
             comment_form=CommentForm()
 
         return render(request, 'detail.html' , {'post':post , 'comments':comments , 'new_comment' : new_comment , 'comment_form':comment_form})
-     
-
-
-
-
-
-
-
-
 
     return render(request ,'detail.html' , {'post':post})
 
@@ -120,8 +105,6 @@ def post_share(request,post_id):
 
             
     
-=======
     post=get_object_or_404(Post,slug=post ,
     publish__year=year, publish__month=month, publish__day=day)
     return render(request ,'detail.html' , {'post':post})
->>>>>>> fdc9cef46373a601c1d6b806f73c6d7fdffb6291

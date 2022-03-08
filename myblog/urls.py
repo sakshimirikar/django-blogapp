@@ -19,13 +19,9 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('post_details/' , include('blogapp.urls')),
-<<<<<<< HEAD
     path('',include('blogapp.urls',	namespace='blog')),
     path('post_share' , include('blogapp.urls'))
    
-=======
-    path('',	include('blogapp.urls',	namespace='blog')),
->>>>>>> fdc9cef46373a601c1d6b806f73c6d7fdffb6291
 
 
 ]
